@@ -1,7 +1,11 @@
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+
+  - name: Check the remote host uptime
+    hosts: localhost
+    tasks:
+      - name: Execute the Uptime command over Command module
+        register: uptimeoutput
+        command: "uptime"
+
+      - debug:
+          var: uptimeoutput.stdout_lines
 
