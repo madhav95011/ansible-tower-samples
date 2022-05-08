@@ -3,4 +3,4 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "new message from test.yml"
+        msg: "this is a new message from test.yml"
